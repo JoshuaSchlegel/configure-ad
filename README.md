@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the deployment and setup of Active Directory within Azure Virtual Machines.<br />
+This tutorial outlines the deployment and setup of Active Directory within Azure Virtual Machines using Windows 11. <br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -20,7 +20,7 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Step 1) Create a Domain Controller and disable Windows Firewall (to test connectivity)
-- Step 2) Create a Client (Virtual Machine) using Windows 10 and confirm connection to the Domain
+- Step 2) Create a Client VM (Virtual Machine) using Windows 10 and confirm connection to the Domain
 - Step 3
 - Step 4
 
@@ -84,14 +84,42 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 ![image](https://github.com/user-attachments/assets/05fd4ba4-3035-4a4b-8d6f-1cacd4448172)
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+*Now we need to set the Domain Controller's Network Interface Card's (NIC) to be static instead of dynamic. Then we'll log into the DC1 VM in using Remote Desktop Connection and disable the Windows Firewall.
 </p>
 <br />
 
+- Click "Home" in the top left -> Virtual machine OR type "v" in the search box up top and click "Virtual machine"
+- Click on the DC1 VM in the Virtual Machine screen within Azure.
+
+![image](https://github.com/user-attachments/assets/ceb3c5af-d283-4016-adfd-1fd5c4f9286c)
+
+- Click on "Network settings" in the left side panel of DC1.
+- (Notice the Private IP address there underlined in green.) Click on the NIC / IP configuration underlined in red.
+
+![image](https://github.com/user-attachments/assets/5a9bd38b-e58e-461e-9795-3b83a2d3c2c8)
+
+- Click on "ipconfig1" towards bottom left of the IP configurations screen.
+- Then, click on Static on the right side under Dynamic. (Take note of the Private IP address again here. We'll use that to test connectivity later.)
+- Click "Save" on the bottom.
+
+![image](https://github.com/user-attachments/assets/fd44ab47-1007-4c84-8e3d-0dd9837fff0d)
+
+![image](https://github.com/user-attachments/assets/c5202f97-b96e-4fe8-82d8-8755de9a523e)
+
+- Click "Home" in the top left -> Virtual machine OR type "v" in the search box up top and click "Virtual machine"
+- Type "remote desktop connection" in the search box in the taskbar and pull up RDC
+- Copy/paste the public IP address into the text box in RDC and click "Connect"
+
+![image](https://github.com/user-attachments/assets/03bef0ff-deb1-4b9d-aa49-764348309092)
+
+- Log into the Domain Controller using the Username and Password we created earlier when deploying DC1. (You may need to click on "More choices" on the bottom to change it from the prepopulated username.)
+- (Decline any options it presents to you once logged into the Domain.) In the "Search" text box located in the bottom left on the taskbar, type "firewall" and open up Windows Defender Firewall.
+
+![image](https://github.com/user-attachments/assets/cd3e60b3-666c-431f-a1e3-3f6c6463f188)
+
+- 
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
 </p>
 <br />
