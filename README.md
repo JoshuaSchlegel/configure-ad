@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the deployment and setup of Active Directory within Azure Virtual Machines using Windows 11. Feel free to try it for yourself at no cost since <a href="https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account">Microsoft Azure</a> can be used with a free subscription for 30 days and/or $200 worth of credits. Lets do it! <br />
+This tutorial outlines the deployment and setup of Active Directory using Windows 11 and Microsoft Azure Virtual Machines. Feel free to try it for yourself at no cost since <a href="https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account">Microsoft Azure</a> can be used with a free subscription for 30 days and/or $200 worth of credits. Lets do it! <br />
 
 <h2>Environments and Technologies Used</h2>
 
