@@ -117,7 +117,44 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 ![image](https://github.com/user-attachments/assets/cd3e60b3-666c-431f-a1e3-3f6c6463f188)
 
-- 
+- Click on "Windows Defender Firewall Properties"
+
+![image](https://github.com/user-attachments/assets/5bc94ea6-3551-4d81-a893-cee1a0932245)
+
+- Across all three of the underlined tabs (Domain Profile, Private Profile, and Public Profile), change the "Firewall state" to Off
+- Click "Apply" in the bottom right after all three have been turned off
+- Then click "Ok" and close Windows Defender Firewall
+
+![image](https://github.com/user-attachments/assets/b8d9e957-3935-4761-8f25-fa6bb2de073f)
+
+*Next we well need to create the Client VM in Azure (Scroll up to find the steps on where to click to create a VM if you need to see those screenshots again.)
+
+- Minimize the DC1 VM and go back to Microsoft Azure
+- Click on "Virtual machine" under recents on the home screen OR type "v" in the search box up top and click "Virtual machine"
+- Click Create -> Azure Virtual Machine
+- I will name it "Client1"
+- Use Windows 10 Pro 22H2 for *Image
+- Use 2 vcpus 8GiB Memory for *Size
+- I will set Username: labuser  and  Password: Password1234
+- ***Make sure it is in the same region and Virtual Network as DC1***
+- Check the Licensing box
+- Click "Next: Disks >" and then "Next: Networking >"
+
+![image](https://github.com/user-attachments/assets/00c47443-fce3-47f9-a242-6d156b3c047d)
+
+![image](https://github.com/user-attachments/assets/df49fe0e-1a71-4fd2-8972-bcd740623c31)
+
+![image](https://github.com/user-attachments/assets/63f3018b-5d02-44fe-93f5-928adcd50a65)
+
+- After verifying the VN is the same one we created for DC1, click "Review + Create" and then "Create"
+
+![image](https://github.com/user-attachments/assets/43f6a90d-d6a1-44cf-92e1-c2f8d362ab2a)
+
+*Now we need to set Client1's DNS settings to DC1's Private IP Address
+
+- After Client1 has been successfully deployed, click on Client1 and go to "Network Settings"
+
+
 
 <p>
 
