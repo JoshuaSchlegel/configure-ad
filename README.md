@@ -153,6 +153,23 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 *Now we need to set Client1's DNS settings to DC1's Private IP Address
 
 - After Client1 has been successfully deployed, click on Client1 and go to "Network Settings"
+- Click on the Network Interface/IP Configuration (client1559_z1 (primaty)/ ipconfig1 (primary)
+
+![image](https://github.com/user-attachments/assets/0f5700f9-a6b3-4bd1-9689-717143363297)
+
+- Click on "DNS servers" in the left side panel under the "Settings" drop down
+- Change the DNS servers from "Inherit from virtual network" to "Custom"
+- Type the Private IP address for DC1 in the text box (If you need to see how to find the private IP address for DC1, please scroll back up to find and review the steps.)
+- Click Save
+
+![image](https://github.com/user-attachments/assets/6948f03b-ec2d-48f5-9779-36fd221ce15e)
+
+- Go back to the Virtual Machine screen in Azure
+- Check the box next to "Client1" and restart Client1 by clicking the 3 dot menu next to "Start"
+
+![image](https://github.com/user-attachments/assets/f5072dda-0c70-4f75-a5da-54edca879c97)
+
+- Once the restart has completed, log into the Client1 VM using Remote Desktop. You'll be able to have multiple Remote Desktops open, so don't worry about still being logged into DC1. Simply pull up another Remote Desktop Connection from the Taskbar Search box. (If you need to see how to log into the Client1 VM using Remote Desktop, please scroll up and review the steps we took to log into DC1.)
 
 
 
