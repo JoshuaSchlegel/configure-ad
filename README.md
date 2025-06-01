@@ -26,10 +26,7 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 <h2>Deployment and Configuration Steps</h2>
 
-<p>
-*First we will need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.
-</p>
-<br />
+**First we will need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.**
 
 - In Microsoft Azure, type "resource" in the search bar at the top and click on "Resource groups"
 - Click the "Create" button either towards top left or the blue one in the middle of the screen.
@@ -43,7 +40,8 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 ![image](https://github.com/user-attachments/assets/c083bab4-c009-4e2d-b7d6-5131e22c92d6)
 
-*Next, we'll create our virtual network.
+**Next, we'll create our virtual network.**
+
 - Type "v" or "virtual network" in the search bar up top and click on "Virtual networks".
 
 ![image](https://github.com/user-attachments/assets/ae4c47f4-f1fb-4410-9bb0-31a6d73b2acb)
@@ -83,10 +81,7 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 ![image](https://github.com/user-attachments/assets/05fd4ba4-3035-4a4b-8d6f-1cacd4448172)
 
-<p>
-*Now we need to set the Domain Controller's Network Interface Card's (NIC) to be static instead of dynamic. Then we'll log into the DC1 VM in using Remote Desktop Connection and disable the Windows Firewall.
-</p>
-<br />
+**Now we need to set the Domain Controller's Network Interface Card's (NIC) to be static instead of dynamic. Then we'll log into the DC1 VM in using Remote Desktop Connection and disable the Windows Firewall.**
 
 - Click "Home" in the top left -> Virtual machine OR type "v" in the search box up top and click "Virtual machine"
 - Click on the DC1 VM in the Virtual Machine screen within Azure.
@@ -127,7 +122,7 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 ![image](https://github.com/user-attachments/assets/b8d9e957-3935-4761-8f25-fa6bb2de073f)
 
-*Next we well need to create the Client VM in Azure (Scroll up to find the steps on where to click to create a VM if you need to see those screenshots again.)
+**Next we well need to create the Client VM in Azure (Scroll up to find the steps on where to click to create a VM if you need to see those screenshots again.)**
 
 - Minimize the DC1 VM and go back to Microsoft Azure
 - Click on "Virtual machine" under recents on the home screen OR type "v" in the search box up top and click "Virtual machine"
@@ -150,7 +145,7 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 
 ![image](https://github.com/user-attachments/assets/43f6a90d-d6a1-44cf-92e1-c2f8d362ab2a)
 
-*Now we need to set Client1's DNS settings to DC1's Private IP Address
+**Now we need to set Client1's DNS settings to DC1's Private IP Address. Then, we will ping the Domain Controller to test the connection.**
 
 - After Client1 has been successfully deployed, click on Client1 and go to "Network Settings"
 - Click on the Network Interface/IP Configuration (client1559_z1 (primaty)/ ipconfig1 (primary)
@@ -170,6 +165,77 @@ This tutorial outlines the deployment and setup of Active Directory within Azure
 ![image](https://github.com/user-attachments/assets/f5072dda-0c70-4f75-a5da-54edca879c97)
 
 - Once the restart has completed, log into the Client1 VM using Remote Desktop. You'll be able to have multiple Remote Desktops open, so don't worry about still being logged into DC1. Simply pull up another Remote Desktop Connection from the Taskbar Search box. (If you need to see how to log into the Client1 VM using Remote Desktop, please scroll up and review the steps we took to log into DC1.)
+- Type "cmd" in the search box on the taskbar and click on "Command Prompt" (Or use "Windows key + R" then type "cmd" -> hit Enter)
+- Type "ping (DC1's private IP Address)" and observe the results
+
+![image](https://github.com/user-attachments/assets/583bf8e7-45b5-40e4-a13c-fb3019bf2a5a)
+
+![image](https://github.com/user-attachments/assets/bed00c95-0046-4f74-b200-e3876dd612d8)
+
+**4 Replies show us that the Ping was successful!**
+
+- Type "PowerShell" in the search box on the taskbar
+- Open up PowerShell and type "ipconfig /all" and observe the DNS settings showing DC1's private IP Address
+
+![image](https://github.com/user-attachments/assets/9206015d-11d4-423d-ae8d-cc301cfef11e)
+
+![image](https://github.com/user-attachments/assets/52212f0a-a2e3-484e-be60-7c1248e134df)
+
+**Now we are going to install Active Directory Domain Services.**
+
+- Log into DC1 VM usig Remote Desktop (If you need to see how to log into the Client1 VM using Remote Desktop, please scroll up and review the steps we took to log into DC1.)
+- In the Server Manager (It should already be started automatically when logging into the Domain) click on "Add roles and features"
+
+![image](https://github.com/user-attachments/assets/128b1523-39c4-4562-9373-7e737072d6eb)
+
+- You'll hit "Next>" 3 times 
+- Check the box next to "Active Directory Domain Services" and click "Add Features"
+- You'll hit "Next>" 3 more times
+- Check the box next to "Restart the destination server automatically if required" and click "yes"
+- Click "Install"
+- Wait for installation to complete
+
+![image](https://github.com/user-attachments/assets/5964e77d-4a6e-4976-bc54-0ac6efce4195)
+
+![image](https://github.com/user-attachments/assets/3f78e325-7dcb-4aa9-b0b9-3d62053f8378)
+
+![image](https://github.com/user-attachments/assets/03f861b3-f142-4464-9069-dd1cf6c0fe31)
+
+![image](https://github.com/user-attachments/assets/f6749f5d-5961-4f9f-be91-bbb6689d3b19)
+
+![image](https://github.com/user-attachments/assets/8e881d93-d519-4142-adbc-49505a028645)
+
+![image](https://github.com/user-attachments/assets/fca70ada-c8fd-4bb4-9626-d6ebbc229fd3)
+
+- Click "close" once installation completes
+
+![image](https://github.com/user-attachments/assets/452247aa-143d-4df3-bd99-2f169542edc0)
+
+- Click on the Flag icon with the yellow warning triangle by it
+- Click "Promote this server to a domain controller
+
+![image](https://github.com/user-attachments/assets/b65c8a7f-6d05-4b68-97c7-7a632462a465)
+
+- Select "Add a new forest"
+- Type "mydomain.com" as the Root domain name
+- Click "Next>"
+
+![image](https://github.com/user-attachments/assets/a6f24145-6ba6-4b10-8ce6-1d41767f21dc)
+
+- Type "Password1" twice (You'll most likely never use this password)
+- Click "Next>" 5 times (You may have to wait a bit on the third "Next" for the BIOS Domain name)
+- Click "Install"
+- After completion, the VM will be shut down
+
+![image](https://github.com/user-attachments/assets/cfdc056b-4731-40e6-af5b-a830de05d5ba)
+
+![image](https://github.com/user-attachments/assets/8da5d7f6-f9cf-475e-928b-7df5166b3290)
+
+- Log back into DC1 with username: mydomain.com\labuser  and same password you've been using
+
+
+
+
 
 
 
