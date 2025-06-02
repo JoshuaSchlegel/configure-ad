@@ -233,6 +233,12 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 - Log back into DC1 with username: mydomain.com\labuser  and same password you've been using
 
+![image](https://github.com/user-attachments/assets/00141521-f4f2-4b84-b889-06c71c90b9a6)
+
+- Click the "Start" menu -> "Windows Administrative Tools" -> "Active Directory Users and Computers"
+
+![image](https://github.com/user-attachments/assets/bbfd6105-4a40-45b4-b9f9-d67a41ca4cbe)
+
 
 
 
