@@ -281,8 +281,34 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 - Log out of DC1 either form the start button or by typing "CTRL + R" -> "logoff" -> Enter
 - Log back in with username: "mydomain.com\jane_admin" (We will use this as our admin account going forward)
 
+![image](https://github.com/user-attachments/assets/f1010c5e-b85f-4fbc-8f35-2bcfbde01903)
 
+**Now we need to join our Client1 VM to the domain (mydomain.com)**
 
+- Login to Client1 as "labuser"
+- Once logged in, right click on Start/Windows Icon -> Click on "System"
+- Click "Advanced System Settings" (You could also just click on "Rename this PC (advanced)")
+- Click on the "Computer Name" on top left -> Click "Change"
+
+![image](https://github.com/user-attachments/assets/5ad1e453-14ac-423f-8ff8-9a8b343689c2)
+
+![image](https://github.com/user-attachments/assets/905f789b-ba83-4963-90b3-d3497aa0ed01)
+
+![image](https://github.com/user-attachments/assets/88f9fa66-d7a3-49db-8bb1-2eca220d1838)
+
+- Under "Member of", select "Domain" and type "mydomain.com" in the text box
+- Click "OK"
+- Use the mydomain.com\jane_admin login info to join
+- Move the System window or close it to see a pop up box stating you have successfully joined and click ok -> close out of the advanced settings
+- Allow it to restart the VM
+
+![image](https://github.com/user-attachments/assets/58f697d8-ef21-4ddd-a25f-1954ba624183)
+
+![image](https://github.com/user-attachments/assets/39343e1b-47a0-4a0b-a1f0-482c086be93e)
+
+![image](https://github.com/user-attachments/assets/796f5bc7-c30c-40c1-945a-9ee6278a7c4a)
+
+*When you log back into Client1, it will be joined to the Domain
 
 <p>
 
