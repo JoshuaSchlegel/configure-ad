@@ -239,8 +239,47 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 ![image](https://github.com/user-attachments/assets/bbfd6105-4a40-45b4-b9f9-d67a41ca4cbe)
 
+- Click the dro pdown next to "mydomain.com", then RIGHT click on "mydomain.com" -> select "New" -> click on "Organizational Unit"
 
+![image](https://github.com/user-attachments/assets/44985932-5b7c-4563-9d74-98a8c7ce5bcd)
 
+- Type "_EMPLOYEES" -> Click "OK"
+
+![image](https://github.com/user-attachments/assets/f5c3793d-bd48-4c9a-b8cf-82a4e55fa55e)
+
+- Right click on "mydomain.com" again -> New -> Organizational Unit
+- This time name it "_ADMINS" and click "OK"
+
+![image](https://github.com/user-attachments/assets/4b1827a7-75ec-4e3a-809e-bbf1f22c57e0)
+
+*You should now see the Organizational Units you created in the left panel like this:
+
+![image](https://github.com/user-attachments/assets/fd512c9b-febf-4245-803a-4628a31c6b66)
+
+- Right click on "_ADMINS" -> New -> select "User"
+- Create our Admin User by filling in the blanks. I'll create an admin user account with the name of "Jane Doe" and Username "jane_admin"
+- Then click Next>
+
+![image](https://github.com/user-attachments/assets/94212fc4-edc8-46c2-af63-7e66b70bc99c)
+
+- To keep it simple for the sake of this tutorial, I'll use the password: "Password1234"
+- **Uncheck the box next to "User must change password at next logon**
+
+![image](https://github.com/user-attachments/assets/75a08d4f-f83c-4f80-b245-c12f3d9c1bd0)
+
+*Now we can see Jane Doe in the _ADMINS Organizational Unit, but we still need to add her to the "Domain Admins" Security Group.
+
+![image](https://github.com/user-attachments/assets/839b87a0-39b6-46c2-93d3-197b7e7d17c7)
+
+- Right Click on Jane Doe -> Add to group
+- Type "domain admins" in the text box and click on "Check Names" -> Click "OK"
+
+![image](https://github.com/user-attachments/assets/860c12e8-2a94-4f32-b917-8d941f18801d)
+
+![image](https://github.com/user-attachments/assets/da9f5a26-3415-449e-bab4-29034be7e25b)
+
+- Log out of DC1 either form the start button or by typing "CTRL + R" -> "logoff" -> Enter
+- Log back in with username: "mydomain.com\jane_admin" (We will use this as our admin account going forward)
 
 
 
