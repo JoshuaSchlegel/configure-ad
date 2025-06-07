@@ -21,8 +21,8 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 - Step 1) Create a Domain Controller and disable Windows Firewall (to test connectivity)
 - Step 2) Create a Client VM (Virtual Machine) using Windows 10 and confirm connection to the Domain
-- Step 3
-- Step 4
+- Step 3) Install Active Directory 
+- Step 4) Join Client1 VM to the Domain and Create Users
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -308,7 +308,41 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 ![image](https://github.com/user-attachments/assets/796f5bc7-c30c-40c1-945a-9ee6278a7c4a)
 
-*When you log back into Client1, it will be joined to the Domain
+**When you log back into Client1, it will be joined to the Domain**
+
+- In the Domain Controller (DC1 VM), pull "Active Directory Users and Computers" back up
+- Under "mydomain.com" in the left panel, click on the "Computers" organizational unit and verify that "Client1" shows up
+
+![image](https://github.com/user-attachments/assets/88a13840-4137-4685-bb30-70d693445a1a)
+
+- Right click on "mydomain.com" to create a new organizational unit called "_CLIENTS" (If you need to see how to do this, please scroll back up to where we created _EMPLOYEES and _ADMINS)
+- Click and drag "Client1" from "Computers" and place it into "_CLIENTS"
+- Click "Yes" when it asks if you're sure
+
+![image](https://github.com/user-attachments/assets/22d5376d-cc98-45f4-9ee9-ee68895f4821)
+
+![image](https://github.com/user-attachments/assets/800be9a6-5bc4-4478-a522-94b591aa2f5d)
+
+**Now we will allow "domain users" access to remote desktop and create plenty of users/employees to practice with in Active Directory**
+
+- Log into Client1 as mydomain.com\jane_admin
+- Right click on the start button/Windows icon -> click "System"
+- Click "Remote Desktop"
+- Under "User accounts" -> click "Select users that can remotely access this PC"
+- Click "Add"
+- Type "domain users" and click "Check Names"
+- Click "OK" and you should see MYDOMAIN\Domain Uswers added
+
+![image](https://github.com/user-attachments/assets/6bbd3db7-af88-45fe-8ab5-8413bc5a6e6f)
+
+![image](https://github.com/user-attachments/assets/5a719506-be45-481c-b8c7-8f2dbfc1ab09)
+
+![image](https://github.com/user-attachments/assets/b1b10de0-3f3c-4b8b-8b98-aea45ce65cb1)
+
+![image](https://github.com/user-attachments/assets/630404d6-6b86-420e-ad3f-0190071f4582)
+
+![image](https://github.com/user-attachments/assets/54ec4c8a-4cad-481c-b3c0-3feab065cfeb)
+
 
 <p>
 
