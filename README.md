@@ -344,10 +344,31 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 ![image](https://github.com/user-attachments/assets/54ec4c8a-4cad-481c-b3c0-3feab065cfeb)
 
 - Log into DC1 as mydomain.com\jane_admin if you aren't already
-- Open Powershell_ise as an administrator
+- In the search box in the task bar type "powershell ise"
+- Right click on "Windows PowerShell ISE" -> click "Run as Administrator"
+- Click on the page symbol (New Script) in the top left
 - Copy and paste <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">This Script </a> into the text area
+- Click the green arrow/triangle pointing right (Run Script) to create a ton of users to work with in Active Directory
+***This will take a bit. It will create 10,000 or so users so feel free to type "ctrl + C" or click on the red square (stop script) to stop it after a bit if you don't want to wait for it to finish. We don't need all 10,000 users so no worries if you stop it early.***
 
-https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1
+![image](https://github.com/user-attachments/assets/8a902c95-39dd-4e4b-a1b2-7e1fa35afc73)
+
+![image](https://github.com/user-attachments/assets/caf4b1a8-7e0a-470b-9ae3-bff2a94fffbd)
+
+![image](https://github.com/user-attachments/assets/064577c3-bcda-4845-a178-f549da594c42)
+
+![image](https://github.com/user-attachments/assets/e8444bc3-0dd6-435b-b037-fa77b63e335b)
+
+***The script shows that the password for the users we just created is "Password1". We'll need to keep that in mind for when we log in as one of the users.***
+
+- Back in DC1, in Active Directory, click on the "_EMPLOYEES" organizational unit and observe the newly created users
+- Attempt to log into Client1 with one of the accounts **(Remember to use "mydomain.com\user" and the password from the script (Password1)**
+
+![image](https://github.com/user-attachments/assets/166ac5eb-ddb3-43b8-86e5-42a317638ca6)
+
+![image](https://github.com/user-attachments/assets/4a2e988c-efe2-4f70-93ba-b8a6088340ff)
+
+*And that completes this tutorial, but it doesn't end here! The next tutorial will walk you through and demonstrate how to implement group policy. If you'd like to learn how to create and deploy Password Lockout Policies and Company Wallpaper, or even just some exposure to Active Directory Group Policy in general, you are welcome to join me in the next one. See you there! : )*
 
 <p>
 
