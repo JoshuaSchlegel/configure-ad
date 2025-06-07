@@ -368,7 +368,7 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 ![image](https://github.com/user-attachments/assets/4a2e988c-efe2-4f70-93ba-b8a6088340ff)
 
-*And that completes this tutorial, but it doesn't end here! The next tutorial will walk you through and demonstrate how to implement group policy. If you'd like to learn how to create and deploy Password Lockout Policies and Company Wallpaper, or even just some exposure to Active Directory Group Policy in general, you are welcome to join me in the next one. See you there! : )*
+*And that completes this tutorial, but it doesn't end here! The next tutorial will walk you through and demonstrate how to implement group policy. If you are ready to hang it up for good, I highly reccomend deleting the resource groups in Microsoft Azure to save yourself some money, or at least stop the Virtual Machines if you plan to take a break. If you'd like to learn how to create and deploy Password Lockout Policies and Company Wallpaper, or even just want some exposure to Active Directory Group Policy in general, you are welcome to join me in the next one. See you there! : )*
 
 <p>
 
