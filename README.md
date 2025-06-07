@@ -343,6 +343,11 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 ![image](https://github.com/user-attachments/assets/54ec4c8a-4cad-481c-b3c0-3feab065cfeb)
 
+- Log into DC1 as mydomain.com\jane_admin if you aren't already
+- Open Powershell_ise as an administrator
+- Copy and paste <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">This Script </a> into the text area
+
+https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1
 
 <p>
 
