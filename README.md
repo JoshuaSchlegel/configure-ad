@@ -21,13 +21,6 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>🧰 High-Level Deployment and Configuration Steps</h2>
-
-- Step 1) Create a Domain Controller and disable Windows Firewall (to test connectivity)
-- Step 2) Create a Client VM (Virtual Machine) using Windows 10 and confirm connection to the Domain
-- Step 3) Install Active Directory 
-- Step 4) Join Client1 VM to the Domain and Create Users
-
 <h2>🧰 Deployment and Configuration Steps</h2>
 
 **Assuming you have a Microsfot Azure account already setup, we will first need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.**
