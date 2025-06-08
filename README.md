@@ -14,6 +14,7 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 
 <h2>Operating Systems Used </h2>
 
+- Windows 11 Pro
 - Windows Server 2022
 - Windows 10 (21H2)
 
