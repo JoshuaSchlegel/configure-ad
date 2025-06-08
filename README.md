@@ -5,29 +5,29 @@
 <h1>Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the deployment and setup of Active Directory using Windows 11 and Microsoft Azure Virtual Machines. Feel free to try it for yourself at no cost since <a href="https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account">Microsoft Azure</a> can be used with a free subscription for 30 days and/or $200 worth of credits. Lets do it! <br />
 
-<h2>Environments and Technologies Used</h2>
+<h2>💻 Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
 
-<h2>Operating Systems Used </h2>
+<h2>👨‍💻 Operating Systems Used </h2>
 
 - Windows 11 Pro
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>🧰 High-Level Deployment and Configuration Steps</h2>
 
 - Step 1) Create a Domain Controller and disable Windows Firewall (to test connectivity)
 - Step 2) Create a Client VM (Virtual Machine) using Windows 10 and confirm connection to the Domain
 - Step 3) Install Active Directory 
 - Step 4) Join Client1 VM to the Domain and Create Users
 
-<h2>Deployment and Configuration Steps</h2>
+<h2>🧰 Deployment and Configuration Steps</h2>
 
-**First we will need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.**
+**Assuming you have a Microsfot Azure account already setup, we will first need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.**
 
 - In Microsoft Azure, type "resource" in the search bar at the top and click on "Resource groups"
 - Click the "Create" button either towards top left or the blue one in the middle of the screen.
