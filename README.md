@@ -18,12 +18,12 @@ This tutorial outlines the deployment and setup of Active Directory using Window
 <h2>👨‍💻 Operating Systems Used </h2>
 
 - Windows 11 Pro
-- Windows Server 2022
 - Windows 10 (21H2)
+- Windows Server 2022
 
 <h2>🧰 Deployment and Configuration Steps</h2>
 
-**Assuming you have a Microsoft Azure account already setup, we will first need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.**
+***Assuming you have a Microsoft Azure account already setup, we will first need to create a Resource Group, Virtual Network and Subnet, and the Domain Controller VM using Windows Server 2022. I will name it DC1 and create the username: labuser and password: Password1234 just to keep things simple.***
 
 - In Microsoft Azure, type "resource" in the search bar at the top and click on "Resource groups"
 - Click the "Create" button either towards top left or the blue one in the middle of the screen.
